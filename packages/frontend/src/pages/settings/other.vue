@@ -66,6 +66,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 					<div class="_gaps_m">
 						<FormInfo warn>{{ i18n.ts._accountTruncate.mayTakeTime }}</FormInfo>
 						<MkButton v-if="!$i.isDeleted" danger @click="truncateAccount">{{ i18n.ts._accountTruncate.requestAccountTruncate }}</MkButton>
+						<MkButton v-if="!$i.isDeleted" @click="truncateAccountKeepDrive">{{ i18n.ts._accountTruncate.requestAccountTruncateKeepDrive }}</MkButton>
 						<MkButton v-else disabled>{{ i18n.ts._accountTruncate.inProgress }}</MkButton>
 					</div>
 				</MkFolder>
@@ -226,6 +227,28 @@ async function truncateAccount() {
 	if (auth.canceled) return;
 
 	await os.apiWithDialog('i/truncate-account', {
+		password: auth.result.password,
+		token: auth.result.token,
+	});
+
+	await os.alert({
+		title: i18n.ts._accountTruncate.started,
+	});
+}
+
+async function truncateAccountKeepDrive() {
+	{
+		const { canceled } = await os.confirm({
+			type: 'warning',
+			text: i18n.ts.truncateAccountConfirm,
+		});
+		if (canceled) return;
+	}
+
+	const auth = await os.authenticateDialog();
+	if (auth.canceled) return;
+
+	await os.apiWithDialog('i/truncate-account-keep-drive', {
 		password: auth.result.password,
 		token: auth.result.token,
 	});

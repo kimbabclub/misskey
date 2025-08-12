@@ -27,6 +27,7 @@ import { CaptchaService } from './CaptchaService.js';
 import { CustomEmojiService } from './CustomEmojiService.js';
 import { DeleteAccountService } from './DeleteAccountService.js';
 import { TruncateAccountService } from './TruncateAccountService.js';
+import { TruncateAccountKeepDriveService } from './TruncateAccountKeepDriveService.js';
 import { DownloadService } from './DownloadService.js';
 import { DriveService } from './DriveService.js';
 import { EmailService } from './EmailService.js';
@@ -323,6 +324,7 @@ const $ApQuestionService: Provider = { provide: 'ApQuestionService', useExisting
 		CustomEmojiService,
 		DeleteAccountService,
 		TruncateAccountService,
+		TruncateAccountKeepDriveService,
 		DownloadService,
 		DriveService,
 		EmailService,
@@ -471,6 +473,7 @@ const $ApQuestionService: Provider = { provide: 'ApQuestionService', useExisting
 		$CustomEmojiService,
 		$DeleteAccountService,
 		$TruncateAccountService,
+		{ provide: 'TruncateAccountKeepDriveService', useExisting: TruncateAccountKeepDriveService },
 		$DownloadService,
 		$DriveService,
 		$EmailService,
@@ -620,6 +623,7 @@ const $ApQuestionService: Provider = { provide: 'ApQuestionService', useExisting
 		CustomEmojiService,
 		DeleteAccountService,
 		TruncateAccountService,
+		TruncateAccountKeepDriveService,
 		DownloadService,
 		DriveService,
 		EmailService,

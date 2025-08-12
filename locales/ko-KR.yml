@@ -2056,8 +2056,9 @@ _accountDelete:
   inProgress: "삭제 진행 중"
 _accountTruncate:
   accountTruncate: "계정 청소"
-  mayTakeTime: "계정 청소는 서버에 부하를 가하기 때문에, 작성한 콘텐츠나 업로드한 파일의 수가 많으면 완료까지 시간이 걸릴 수 있습니다."
+  mayTakeTime: "계정 청소는 서버에 부하를 가하기 때문에, 작성한 콘텐츠나 업로드한 파일의 수가 많으면 완료까지 시간이 걸릴 수 있습니다. (드라이브 유지 옵션 선택 시 드라이브의 파일은 삭제되지 않고 유지됩니다.)"
   requestAccountTruncate: "계정 청소 요청"
+  requestAccountTruncateKeepDrive: "계정 청소 요청(드라이브 유지)"
   started: "청소 작업이 시작되었습니다."
   inProgress: "청소 진행 중"
 _ad:
