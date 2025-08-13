@@ -1260,6 +1260,7 @@ reloadRequiredToApplySettings: "설정을 적용하려면 새로고침을 해야
 remainingN: "나머지: {n}"
 overwriteContentConfirm: "현재 내용을 덮어쓰기 합니다. 계속 진행하시겠습니까?"
 seasonalScreenEffect: "계절에 따른 효과 보이기"
+hideCatSpeech: "고양이 말투 비표시"
 decorate: "장식하기"
 addMfmFunction: "장식 추가하기"
 enableQuickAddMfmFunction: "상급자용 MFM 선택기 표시하기"

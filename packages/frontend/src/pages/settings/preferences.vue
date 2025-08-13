@@ -692,6 +692,14 @@ SPDX-License-Identifier: AGPL-3.0-only
 								</MkPreferenceContainer>
 							</SearchMarker>
 
+							<SearchMarker :keywords="['cat', 'nya', 'nyaize', 'iscat', 'speech']">
+								<MkPreferenceContainer k="disableCatSpeech">
+									<MkSwitch v-model="disableCatSpeech">
+										<template #label><SearchLabel>{{ i18n.ts.hideCatSpeech }}</SearchLabel></template>
+									</MkSwitch>
+								</MkPreferenceContainer>
+							</SearchMarker>
+
 							<SearchMarker :keywords="['image', 'photo', 'picture', 'media', 'thumbnail', 'new', 'tab']">
 								<MkPreferenceContainer k="imageNewTab">
 									<MkSwitch v-model="imageNewTab">
@@ -849,6 +857,7 @@ const reactionsDisplaySize = prefer.model('reactionsDisplaySize');
 const limitWidthOfReaction = prefer.model('limitWidthOfReaction');
 const squareAvatars = prefer.model('squareAvatars');
 const enableSeasonalScreenEffect = prefer.model('enableSeasonalScreenEffect');
+const disableCatSpeech = prefer.model('disableCatSpeech');
 const showAvatarDecorations = prefer.model('showAvatarDecorations');
 const nsfw = prefer.model('nsfw');
 const emojiStyle = prefer.model('emojiStyle');
@@ -914,6 +923,7 @@ watch([
 	squareAvatars,
 	highlightSensitiveMedia,
 	enableSeasonalScreenEffect,
+	disableCatSpeech,
 	chatShowSenderName,
 	useStickyIcons,
 	enableHighQualityImagePlaceholders,

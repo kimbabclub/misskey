@@ -5059,6 +5059,10 @@ export interface Locale extends ILocale {
      */
     "seasonalScreenEffect": string;
     /**
+     * ねこ語を非表示
+     */
+    "hideCatSpeech": string;
+    /**
      * デコる
      */
     "decorate": string;
@@ -8017,13 +8021,17 @@ export interface Locale extends ILocale {
          */
         "accountDelete": string;
         /**
-         * アカウントの整理は負荷のかかる処理であるため、作成したコンテンツの数やアップロードしたファイルの数が多いと完了までに時間がかかることがあります。
+         * アカウントの整理は負荷のかかる処理であるため、作成したコンテンツの数やアップロードしたファイルの数が多いと完了までに時間がかかることがあります。(ドライブ保持オプション選択時はドライブのファイルは削除されずに保持されます。)
          */
         "mayTakeTime": string;
         /**
          * アカウント整理をリクエスト
          */
         "requestAccountTruncate": string;
+        /**
+         * アカウント整理(ドライブ保持)
+         */
+        "requestAccountTruncateKeepDrive": string;
         /**
          * 整理処理が開始されました。
          */
