@@ -78,7 +78,7 @@ const emit = defineEmits<{
 	(ev: 'click', v: MouseEvent): void;
 }>();
 
-const showDecoration = props.forceShowDecoration || prefer.s.showAvatarDecorations;
+const showDecoration = (props.forceShowDecoration || prefer.s.showAvatarDecorations) && !prefer.s.mutedAvatarDecorationUsers.includes(props.user.id);
 
 const bound = computed(() => props.link
 	? { to: userPage(props.user), target: props.target }

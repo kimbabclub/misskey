@@ -151,6 +151,8 @@ enterFileName: "ファイル名を入力"
 mute: "ミュート"
 unmute: "ミュート解除"
 renoteMute: "リノートをミュート"
+avatarDecoMute: "アバター装飾をミュート"
+avatarDecoUnmute: "アバター装飾のミュートを解除"
 renoteUnmute: "リノートのミュートを解除"
 block: "ブロック"
 unblock: "ブロック解除"
@@ -2082,8 +2084,9 @@ _accountDelete:
 
 _accountTruncate:
   accountDelete: "アカウントの整理"
-  mayTakeTime: "アカウントの整理は負荷のかかる処理であるため、作成したコンテンツの数やアップロードしたファイルの数が多いと完了までに時間がかかることがあります。"
+  mayTakeTime: "アカウントの整理は負荷のかかる処理であるため、作成したコンテンツの数やアップロードしたファイルの数が多いと完了までに時間がかかることがあります。(ドライブ保持オプション選択時はドライブのファイルは削除されずに保持されます。)"
   requestAccountTruncate: "アカウント整理をリクエスト"
+  requestAccountTruncateKeepDrive: "アカウント整理(ドライブ保持)"
   started: "整理処理が開始されました。"
   inProgress: "整理が進行中"
 
